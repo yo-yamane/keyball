@@ -75,30 +75,19 @@ void oledkit_render_info_user(void) {
 
 
 #ifdef COMBO_ENABLE
-
-enum combos{
-JK_COMMA,
-KL_DOT,
-UI_LBRC,
-IO_RBRC,
-DF_MINS,
-SD_UNDER,
-};
-
-const unit16_t PROGREM my_jk[] = {KC_J, KC_K, COMBO_END};
-const unit16_t PROGREM my_kl[] = {KC_K, KC_L, COMBO_END};
-const unit16_t PROGREM my_ui[] = {KC_U, KC_I, COMBO_END};
-const unit16_t PROGREM my_io[] = {KC_I, KC_O, COMBO_END};
-const unit16_t PROGREM my_df[] = {KC_D, KC_F, COMBO_END};
-const unit16_t PROGREM my_sd[] = {KC_S, KC_D, COMBO_END};
+const unit16_t PROGMEM my_jk[] = {KC_J, KC_K, COMBO_END};
+const unit16_t PROGMEM my_kl[] = {KC_K, KC_L, COMBO_END};
+const unit16_t PROGMEM my_ui[] = {KC_U, KC_I, COMBO_END};
+const unit16_t PROGMEM my_io[] = {KC_I, KC_O, COMBO_END};
+const unit16_t PROGMEM my_df[] = {KC_D, KC_F, COMBO_END};
+const unit16_t PROGMEM my_sd[] = {KC_S, KC_D, COMBO_END};
 
 combo_t key_combos[] = {
-[JK_COMMA] = COMBO(my_jk,KC_COMM),
-[KL_DOT] = COMBO(my_kl,KC_DOT),
-[UI_LBRC] = COMBO(my_ui,KC_LBRC),
-[IO_RBRC] = COMBO(my_io,KC_RBRC),
-[DF_MINS] = COMBO(my_df,KC_MINS),
-[SD_UNDER] = COMBO(my_sd,LSFT(KC_MINS)),
+  COMBO(my_jk, KC_COMM),
+  COMBO(my_kl, KC_DOT),
+  COMBO(my_ui, KC_LBRC),
+  COMBO(my_io, KC_RBRC),
+  COMBO(my_df, KC_MINS),
+  COMBO(my_sd, LSFT(KC_MINS)),
 };
-
 #endif
